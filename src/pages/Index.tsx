@@ -1,8 +1,8 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Phone, Mail, MapPin, Star, Users, Award } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 const Index = () => {
   const danceforms = [
@@ -179,7 +179,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Form Section */}
       <section id="contact" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -187,7 +187,7 @@ const Index = () => {
               Get In Touch
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Ready to start your dance journey? Contact us today and let's dance together!
+              Ready to start your dance journey? Fill out the form below and let's dance together!
             </p>
           </div>
           
@@ -230,36 +230,7 @@ const Index = () => {
               </Card>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Ready to Dance?</h3>
-              <p className="text-purple-100 mb-6 leading-relaxed">
-                Join our vibrant community of dancers and discover the joy of movement. Whether you're a beginner or an experienced dancer, we have the perfect class for you.
-              </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <Star className="h-5 w-5 mr-2 text-yellow-300" />
-                  Professional instructors
-                </li>
-                <li className="flex items-center">
-                  <Star className="h-5 w-5 mr-2 text-yellow-300" />
-                  Flexible class schedules
-                </li>
-                <li className="flex items-center">
-                  <Star className="h-5 w-5 mr-2 text-yellow-300" />
-                  All skill levels welcome
-                </li>
-                <li className="flex items-center">
-                  <Star className="h-5 w-5 mr-2 text-yellow-300" />
-                  Performance opportunities
-                </li>
-              </ul>
-              <Button 
-                size="lg" 
-                className="w-full bg-white text-purple-600 hover:bg-gray-50 font-semibold"
-              >
-                Start Your Journey
-              </Button>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>
