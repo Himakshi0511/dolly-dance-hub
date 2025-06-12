@@ -7,10 +7,10 @@ import { Phone, Mail, MapPin, Star, Users, Award } from "lucide-react";
 const Index = () => {
   const danceforms = [
     {
-      name: "Hip Hop",
-      description: "Urban street dance with energetic moves and rhythmic beats",
-      icon: "🎤",
-      color: "from-purple-500 to-pink-500"
+      name: "Bollywood",
+      description: "Vibrant Indian cinema dance combining classical and modern styles",
+      icon: "🎬",
+      color: "from-yellow-500 to-red-500"
     },
     {
       name: "Freestyle",
@@ -23,18 +23,6 @@ const Index = () => {
       description: "Graceful Middle Eastern dance focusing on torso movements",
       icon: "💃",
       color: "from-rose-500 to-orange-500"
-    },
-    {
-      name: "Folk Dance",
-      description: "Traditional cultural dances celebrating heritage and community",
-      icon: "🌾",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      name: "Bollywood",
-      description: "Vibrant Indian cinema dance combining classical and modern styles",
-      icon: "🎬",
-      color: "from-yellow-500 to-red-500"
     }
   ];
 
@@ -49,7 +37,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Dance with Dolly
+              Dolly Dance Hub
             </h1>
             <div className="hidden md:flex space-x-6">
               <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-purple-600 transition-colors">Home</button>
@@ -66,10 +54,10 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <Badge className="mb-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white">
-              ✨ Premier Dance Academy
+              ✨ Premier Dance Studio
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 bg-clip-text text-transparent animate-fade-in">
-              Dance with Dolly
+              Dolly Dance Hub
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 animate-fade-in">
               Where passion meets rhythm and dreams take flight through dance
@@ -110,7 +98,7 @@ const Index = () => {
               <div className="flex justify-center mb-2">
                 <Award className="h-8 w-8 text-pink-600" />
               </div>
-              <h3 className="text-3xl font-bold text-gray-800">5</h3>
+              <h3 className="text-3xl font-bold text-gray-800">3</h3>
               <p className="text-gray-600">Dance Forms</p>
             </div>
             <div className="animate-fade-in">
@@ -132,7 +120,7 @@ const Index = () => {
               Our Dance Forms
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Discover your passion through our diverse range of dance styles, each designed to bring out your unique expression
+              Discover your passion through our three specialized dance styles, each designed to bring out your unique expression
             </p>
           </div>
           
@@ -167,14 +155,14 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              About Dance with Dolly
+              About Dolly Dance Hub
             </h2>
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Welcome to Dance with Dolly, where movement becomes magic and every step tells a story. Our academy is a vibrant community dedicated to nurturing dancers of all ages and skill levels.
+                Welcome to Dolly Dance Hub, where movement becomes magic and every step tells a story. Our studio is a vibrant community dedicated to nurturing dancers of all ages and skill levels.
               </p>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                Under the visionary leadership of co-founder <strong>Himakshi Thakre</strong>, we offer comprehensive training in five dynamic dance forms, creating an environment where creativity flourishes and confidence soars.
+                Under the visionary leadership of co-founder <strong>Himakshi Thakre</strong>, we offer comprehensive training in three dynamic dance forms, creating an environment where creativity flourishes and confidence soars.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                 <div className="text-left">
@@ -183,7 +171,7 @@ const Index = () => {
                 </div>
                 <div className="text-left">
                   <h3 className="text-xl font-semibold text-pink-600 mb-2">Our Vision</h3>
-                  <p className="text-gray-600">To be the premier dance academy that transforms lives through the art of movement and rhythm.</p>
+                  <p className="text-gray-600">To be the premier dance studio that transforms lives through the art of movement and rhythm.</p>
                 </div>
               </div>
             </div>
@@ -281,23 +269,19 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Dance with Dolly
+              Dolly Dance Hub
             </h3>
             <p className="text-gray-300 mb-6">Co-founded by Himakshi Thakre</p>
             <div className="flex justify-center space-x-8 text-gray-400">
-              <span>Hip Hop</span>
+              <span>Bollywood</span>
               <span>•</span>
               <span>Freestyle</span>
               <span>•</span>
               <span>Belly Dance</span>
-              <span>•</span>
-              <span>Folk</span>
-              <span>•</span>
-              <span>Bollywood</span>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-700">
               <p className="text-gray-400">
-                © 2024 Dance with Dolly. All rights reserved.
+                © 2024 Dolly Dance Hub. All rights reserved.
               </p>
             </div>
           </div>
