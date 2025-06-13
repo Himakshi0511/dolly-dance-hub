@@ -12,7 +12,7 @@ const Index = () => {
       description: "Vibrant Indian cinema dance combining classical and modern styles",
       icon: "🎬",
       color: "from-yellow-500 to-red-500",
-      image: "/lovable-uploads/98e47371-dd07-4df6-8530-0b53875304fe.png"
+      image: "/lovable-uploads/cfeabff7-b509-42ae-b044-b4ea9f501770.png"
     },
     {
       name: "Freestyle",
@@ -25,7 +25,8 @@ const Index = () => {
       name: "Belly Dance",
       description: "Graceful Middle Eastern dance focusing on torso movements",
       icon: "💃",
-      color: "from-rose-500 to-orange-500"
+      color: "from-rose-500 to-orange-500",
+      image: "/lovable-uploads/80ff03e4-93cd-4324-ab8f-0b1a4210226e.png"
     },
     {
       name: "Classical",
