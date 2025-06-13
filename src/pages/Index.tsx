@@ -11,13 +11,15 @@ const Index = () => {
       name: "Bollywood",
       description: "Vibrant Indian cinema dance combining classical and modern styles",
       icon: "🎬",
-      color: "from-yellow-500 to-red-500"
+      color: "from-yellow-500 to-red-500",
+      image: "/lovable-uploads/98e47371-dd07-4df6-8530-0b53875304fe.png"
     },
     {
       name: "Freestyle",
       description: "Express yourself with creative and spontaneous dance movements",
       icon: "🕺",
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
+      image: "/lovable-uploads/98e47371-dd07-4df6-8530-0b53875304fe.png"
     },
     {
       name: "Belly Dance",
@@ -29,13 +31,15 @@ const Index = () => {
       name: "Classical",
       description: "Traditional dance forms with precise techniques and cultural heritage",
       icon: "🏛️",
-      color: "from-emerald-500 to-teal-500"
+      color: "from-emerald-500 to-teal-500",
+      image: "/lovable-uploads/74ae3221-25f2-485c-9d05-f1bad194130c.png"
     },
     {
       name: "Folk",
       description: "Cultural dances celebrating regional traditions and community spirit",
       icon: "🌾",
-      color: "from-amber-500 to-yellow-500"
+      color: "from-amber-500 to-yellow-500",
+      image: "/lovable-uploads/d67beba6-b69e-441a-8ea5-3173fdc4c716.png"
     }
   ];
 
@@ -55,6 +59,7 @@ const Index = () => {
             <div className="hidden md:flex space-x-6">
               <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-purple-600 transition-colors">Home</button>
               <button onClick={() => scrollToSection('classes')} className="text-gray-700 hover:text-purple-600 transition-colors">Classes</button>
+              <button onClick={() => scrollToSection('team')} className="text-gray-700 hover:text-purple-600 transition-colors">Our Team</button>
               <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-purple-600 transition-colors">About</button>
               <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-purple-600 transition-colors">Contact</button>
             </div>
@@ -148,7 +153,16 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {danceforms.map((dance, index) => (
-              <Card key={dance.name} className="hover:shadow-xl transition-all duration-300 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm animate-fade-in">
+              <Card key={dance.name} className="hover:shadow-xl transition-all duration-300 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm animate-fade-in overflow-hidden">
+                {dance.image && (
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={dance.image} 
+                      alt={dance.name}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    />
+                  </div>
+                )}
                 <CardHeader className="text-center">
                   <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-r ${dance.color} flex items-center justify-center text-3xl`}>
                     {dance.icon}
@@ -168,6 +182,52 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Team Section */}
+      <section id="team" className="py-20 bg-gradient-to-r from-indigo-100 to-purple-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              Our Dance Team
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Meet our talented dancers who bring passion and energy to every performance
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <Card className="overflow-hidden border-0 bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow">
+              <div className="relative h-96">
+                <img 
+                  src="/lovable-uploads/7a6f5173-fadf-4f6e-b9c3-1585e8ce1d33.png" 
+                  alt="Classical Dance Team"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-2xl font-bold">Classical Dance Ensemble</h3>
+                  <p className="text-lg opacity-90">Traditional elegance in motion</p>
+                </div>
+              </div>
+            </Card>
+            
+            <Card className="overflow-hidden border-0 bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow">
+              <div className="relative h-96">
+                <img 
+                  src="/lovable-uploads/72742a0c-1ab4-4343-9bfd-c13a5e312613.png" 
+                  alt="Folk Dance Team"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-2xl font-bold">Folk Dance Troupe</h3>
+                  <p className="text-lg opacity-90">Celebrating cultural heritage</p>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
