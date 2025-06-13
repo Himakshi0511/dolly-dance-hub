@@ -102,6 +102,18 @@ const ContactForm = () => {
                   Belly Dance
                 </Label>
               </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="classical" id="classical" />
+                <Label htmlFor="classical" className="text-sm text-gray-600">
+                  Classical
+                </Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="folk" id="folk" />
+                <Label htmlFor="folk" className="text-sm text-gray-600">
+                  Folk
+                </Label>
+              </div>
             </RadioGroup>
           </div>
 

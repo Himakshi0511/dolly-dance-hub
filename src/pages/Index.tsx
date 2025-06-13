@@ -24,6 +24,18 @@ const Index = () => {
       description: "Graceful Middle Eastern dance focusing on torso movements",
       icon: "💃",
       color: "from-rose-500 to-orange-500"
+    },
+    {
+      name: "Classical",
+      description: "Traditional dance forms with precise techniques and cultural heritage",
+      icon: "🏛️",
+      color: "from-emerald-500 to-teal-500"
+    },
+    {
+      name: "Folk",
+      description: "Cultural dances celebrating regional traditions and community spirit",
+      icon: "🌾",
+      color: "from-amber-500 to-yellow-500"
     }
   ];
 
@@ -108,7 +120,7 @@ const Index = () => {
               <div className="flex justify-center mb-2">
                 <Award className="h-8 w-8 text-pink-600" />
               </div>
-              <h3 className="text-3xl font-bold text-gray-800">3</h3>
+              <h3 className="text-3xl font-bold text-gray-800">5</h3>
               <p className="text-gray-600">Dance Forms</p>
             </div>
             <div className="animate-fade-in">
@@ -130,7 +142,7 @@ const Index = () => {
               Our Dance Forms
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Discover your passion through our three specialized dance styles, each designed to bring out your unique expression
+              Discover your passion through our five specialized dance styles, each designed to bring out your unique expression
             </p>
           </div>
           
@@ -259,6 +271,10 @@ const Index = () => {
               <span>Freestyle</span>
               <span>•</span>
               <span>Belly Dance</span>
+              <span>•</span>
+              <span>Classical</span>
+              <span>•</span>
+              <span>Folk</span>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-700">
               <p className="text-gray-400">
