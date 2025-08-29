@@ -102,14 +102,16 @@ const DanceStudio3D = ({ scrollToSection }: DanceStudio3DProps) => {
         </Sphere>
       ))}
 
-      {/* Navigation Instructions */}
+      {/* Enhanced Navigation Instructions */}
       <Html position={[0, 8, 0]} center>
         <div className="text-center text-white font-bold text-lg bg-black/50 p-4 rounded-lg backdrop-blur-sm">
-          <h2 className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent text-2xl mb-2">
-            🕺 Dolly Dance Hub 💃
+          <h2 className="text-2xl mb-2 animate-pulse">
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent animate-bounce">
+              🕺 Dolly Dance Hub 💃
+            </span>
           </h2>
-          <p className="text-sm mb-2">Explore our 3D dance studio!</p>
-          <p className="text-xs text-purple-300">
+          <p className="text-sm mb-2 animate-bounce">Explore our 3D dance studio!</p>
+          <p className="text-xs text-purple-300 animate-pulse">
             Click and drag to rotate • Scroll to zoom • Click sections to interact
           </p>
         </div>

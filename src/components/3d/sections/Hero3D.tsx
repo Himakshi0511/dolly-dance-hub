@@ -62,11 +62,11 @@ const Hero3D = ({ position, scrollToSection, onHover, onLeave, isHovered }: Hero
         </Sphere>
       ))}
 
-      {/* Title */}
+      {/* Animated Title */}
       <Text
-        position={[0, 3, 0]}
+        position={[0, 3 + Math.sin(Date.now() * 0.003) * 0.2, 0]}
         fontSize={1.5}
-        color="#ffffff"
+        color={`hsl(${(Date.now() * 0.1) % 360}, 70%, 90%)`}
         anchorX="center"
         anchorY="middle"
         font="/fonts/arial.woff"
@@ -77,9 +77,9 @@ const Hero3D = ({ position, scrollToSection, onHover, onLeave, isHovered }: Hero
       </Text>
 
       <Text
-        position={[0, 1.5, 0]}
+        position={[0, 1.5 + Math.cos(Date.now() * 0.002) * 0.1, 0]}
         fontSize={0.5}
-        color="#ff69b4"
+        color={`hsl(${(Date.now() * 0.15 + 60) % 360}, 80%, 70%)`}
         anchorX="center"
         anchorY="middle"
         font="/fonts/arial.woff"

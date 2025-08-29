@@ -76,37 +76,38 @@ const Classes3D = ({ position, scrollToSection, onHover, onLeave, isHovered }: C
         </Box>
       ))}
 
-      {/* Title */}
+      {/* Animated Title */}
       <Text
-        position={[0, 4, 0]}
+        position={[0, 4 + Math.sin(Date.now() * 0.004) * 0.3, 0]}
         fontSize={0.8}
-        color="#ffffff"
+        color={`hsl(${180 + Math.sin(Date.now() * 0.002) * 30}, 80%, 80%)`}
         anchorX="center"
         anchorY="middle"
         outlineWidth={0.02}
         outlineColor="#00ffff"
+        rotation={[0, Math.sin(Date.now() * 0.001) * 0.1, 0]}
       >
         DANCE CLASSES
       </Text>
 
-      {/* Class Details */}
+      {/* Class Details with Animated Text */}
       {selectedClass && (
         <Html position={[0, -2, 0]} center>
           <div className="bg-black/80 text-white p-4 rounded-lg backdrop-blur-sm max-w-sm">
             <div className="text-center">
-              <div className="text-3xl mb-2">
+              <div className="text-3xl mb-2 animate-bounce">
                 {danceTypes.find(d => d.name === selectedClass)?.icon}
               </div>
-              <h3 className="text-lg font-bold mb-2 text-cyan-400">
+              <h3 className="text-lg font-bold mb-2 text-cyan-400 animate-pulse">
                 {selectedClass}
               </h3>
-              <p className="text-sm mb-3">
+              <p className="text-sm mb-3 animate-fade-in">
                 Professional {selectedClass.toLowerCase()} classes for all skill levels. 
                 Join our passionate community of dancers!
               </p>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 rounded text-sm hover:from-cyan-600 hover:to-blue-600"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 rounded text-sm hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-200 animate-pulse"
               >
                 Join This Class
               </button>

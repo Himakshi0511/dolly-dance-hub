@@ -74,15 +74,16 @@ const Stats3D = ({ position, onHover, onLeave, isHovered }: Stats3DProps) => {
         </Box>
       ))}
 
-      {/* Title */}
+      {/* Animated Title */}
       <Text
-        position={[0, 4, 0]}
-        fontSize={0.8}
-        color="#ffffff"
+        position={[0, 4 + Math.cos(Date.now() * 0.003) * 0.2, 0]}
+        fontSize={0.8 + Math.sin(Date.now() * 0.005) * 0.1}
+        color={`hsl(${120 + Math.sin(Date.now() * 0.003) * 40}, 90%, 85%)`}
         anchorX="center"
         anchorY="middle"
         outlineWidth={0.02}
         outlineColor="#32cd32"
+        rotation={[Math.sin(Date.now() * 0.002) * 0.05, 0, 0]}
       >
         OUR ACHIEVEMENTS
       </Text>

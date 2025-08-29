@@ -56,15 +56,16 @@ const Contact3D = ({ position, scrollToSection, onHover, onLeave, isHovered }: C
         />
       </Box>
 
-      {/* Title */}
+      {/* Animated Title */}
       <Text
-        position={[0, 4, 0]}
-        fontSize={0.7}
-        color="#ffffff"
+        position={[0, 4 + Math.sin(Date.now() * 0.0035) * 0.3, 0]}
+        fontSize={0.7 + Math.sin(Date.now() * 0.006) * 0.08}
+        color={`hsl(${20 + Math.sin(Date.now() * 0.004) * 25}, 90%, 80%)`}
         anchorX="center"
         anchorY="middle"
         outlineWidth={0.02}
         outlineColor="#ff4500"
+        rotation={[Math.cos(Date.now() * 0.002) * 0.06, 0, Math.sin(Date.now() * 0.0018) * 0.04]}
       >
         CONTACT US
       </Text>

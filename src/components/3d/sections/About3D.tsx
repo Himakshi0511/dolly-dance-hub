@@ -60,15 +60,16 @@ const About3D = ({ position, onHover, onLeave, isHovered }: About3DProps) => {
         </Sphere>
       ))}
 
-      {/* Title */}
+      {/* Animated Title */}
       <Text
-        position={[0, 3, 0]}
-        fontSize={0.7}
-        color="#ffffff"
+        position={[0, 3 + Math.sin(Date.now() * 0.0025) * 0.25, 0]}
+        fontSize={0.7 + Math.cos(Date.now() * 0.004) * 0.05}
+        color={`hsl(${50 + Math.cos(Date.now() * 0.003) * 20}, 95%, 75%)`}
         anchorX="center"
         anchorY="middle"
         outlineWidth={0.02}
         outlineColor="#ffd700"
+        rotation={[0, Math.cos(Date.now() * 0.0015) * 0.08, 0]}
       >
         ABOUT US
       </Text>
