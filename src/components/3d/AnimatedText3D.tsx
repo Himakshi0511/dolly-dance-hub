@@ -63,7 +63,6 @@ const AnimatedText3D = ({
       color={currentColor}
       anchorX="center"
       anchorY="middle"
-      font="/fonts/arial.woff"
       outlineWidth={0.02}
       outlineColor={currentColor}
     >
