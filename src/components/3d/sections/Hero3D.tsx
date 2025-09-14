@@ -69,7 +69,6 @@ const Hero3D = ({ position, scrollToSection, onHover, onLeave, isHovered }: Hero
         color={`hsl(${(Date.now() * 0.1) % 360}, 70%, 90%)`}
         anchorX="center"
         anchorY="middle"
-        font="/fonts/arial.woff"
         outlineWidth={0.02}
         outlineColor="#ff1493"
       >
@@ -82,7 +81,6 @@ const Hero3D = ({ position, scrollToSection, onHover, onLeave, isHovered }: Hero
         color={`hsl(${(Date.now() * 0.15 + 60) % 360}, 80%, 70%)`}
         anchorX="center"
         anchorY="middle"
-        font="/fonts/arial.woff"
       >
         Where passion meets rhythm
       </Text>
