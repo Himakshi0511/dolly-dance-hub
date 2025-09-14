@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,15 +14,22 @@ const ContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!name || !age || !danceForm) {
-      toast({
-        title: "Please fill in all fields",
-        description: "Name, age, and dance form are required.",
-        variant: "destructive",
-      });
-      return;
-    }
+
+    // Create query object
+    const query = {
+      id: Date.now().toString(),
+      name,
+      age,
+      danceForm,
+      timestamp: new Date().toISOString(),
+      status: 'new' as const
+    };
+
+    // Save to localStorage for admin dashboard
+    const existingQueries = localStorage.getItem('contactQueries');
+    const queries = existingQueries ? JSON.parse(existingQueries) : [];
+    queries.unshift(query); // Add new query at the beginning
+    localStorage.setItem('contactQueries', JSON.stringify(queries));
 
     // Here you would typically send the data to your backend
     toast({
