@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 import Scene3D from "@/components/3d/Scene3D";
 
 const Index = () => {
-  const [is3DMode, setIs3DMode] = useState(true);
+  const [is3DMode, setIs3DMode] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     if (is3DMode) {
